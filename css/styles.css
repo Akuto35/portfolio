@@ -162,9 +162,34 @@ body {
   }
 }
 
-/* Reduce horizontal spacing between skill columns */
-#skills .row {
-  --bs-gutter-x: -20rem; /* default is larger in Bootstrap, lower to tighten */
+
+/* properly handle two-column layout with internal grid */
+.skills-column {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(236, 236, 236);
+  border-radius: 5%;
+  gap: 2rem;
+}
+
+@media (max-width: 991px) {
+  .skills-column {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+#spe-outils {
+  background-color: rgb(236, 236, 236);
+  border-radius: 5%;
+}
+#spe-outils .row {
+  margin-right: calc(10 * var(--bs-gutter-x));
+  margin-left: calc(10 * var(--bs-gutter-x));
 }
 
 hr {
@@ -11013,7 +11038,7 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #000000;
-  background-image: url("/assets/img/education_bg.jpg");
+  background-image: url("../assets/img/education_bg.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -11201,7 +11226,7 @@ header.masthead .masthead-heading {
 
 /* If the timeline-image element is empty, display a smaller blue dot */
 .timeline > li .timeline-image:empty {
-  background-color: #1e63ff; /* blue */
+  background-color: #928cff;
   width: 40px;
   height: 40px;
   border-width: 4px;
