@@ -164,32 +164,32 @@ body {
 
 
 /* properly handle two-column layout with internal grid */
-.skills-column {
-  flex: 0 0 50%;
-  max-width: 50%;
-  padding: 0 15px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
+#section-competence {
   background-color: rgb(236, 236, 236);
   border-radius: 5%;
-  gap: 2rem;
-}
 
-@media (max-width: 991px) {
-  .skills-column {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
 }
 
 #spe-outils {
   background-color: rgb(236, 236, 236);
   border-radius: 5%;
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
 }
-#spe-outils .row {
-  margin-right: calc(10 * var(--bs-gutter-x));
-  margin-left: calc(10 * var(--bs-gutter-x));
+/*#spe-outils .row {
+  margin-right: calc(1 * var(--bs-gutter-x));
+  margin-left: calc(1 * var(--bs-gutter-x));
+}*/
+
+@media (max-width: 991px) {
+  #section-competence {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  #spe-outils {
+    max-width: 100%;
+  }
 }
 
 hr {
@@ -689,6 +689,11 @@ progress {
 
 .img-fluid {
   max-width: 100%;
+  height: auto;
+}
+
+#alexphoto {
+  max-width: 90%;
   height: auto;
 }
 
