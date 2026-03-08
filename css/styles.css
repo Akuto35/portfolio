@@ -148,8 +148,8 @@ body {
 
 /* Skill icons: use real images and keep consistent size */
 .skill-item .skill-icon {
-  width: 96px;
-  height: 96px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
   display: block;
   margin: 0 auto 12px auto;
@@ -11043,13 +11043,45 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #000000;
-  background-image: url("../assets/img/education_bg.jpg");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
-  background-size: cover;
-
+  position: relative;
+  overflow: hidden;
 }
+
+.back-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  object-position: center;
+}
+
+/*@media (min-aspect-ration:16/9) {
+  .back-video {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ration:16/9) {
+  .back-video {
+    width: auto;
+    height: 100%;
+  }
+}*/
+
+.back-back-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  object-fit: cover;
+  object-position: center;
+}
+
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
   font-style: italic;
@@ -11384,10 +11416,9 @@ header.masthead .masthead-heading {
 }
 
 section#contact {
-  background-color: #212529;
-  background-image: url("../assets/img/map-image.png");
-  background-repeat: no-repeat;
   background-position: center;
+  position: relative;
+  overflow: hidden;
 }
 section#contact .section-heading {
   color: #fff;
